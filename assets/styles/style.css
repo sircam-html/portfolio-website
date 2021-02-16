@@ -1,9 +1,13 @@
 :root {
-
+--white: #fff;
+--border-image: #EDEDED;
+--border-title: #A9A9A9;
+--section-title-color: #A2A2A2;
+--link-color: grey;
 
 }
 
-/*/////////////header and navigation ///////////*/
+/*/////////////header and navigation ///////////////*/
 
 html {
     scroll-behavior: smooth;
@@ -11,7 +15,7 @@ html {
 
 body {
     margin: 0 auto;
-    background-color: white;
+    background-color: var(--white);
 }
 
 main {
@@ -21,10 +25,10 @@ main {
 
 /*-------------------------------------------------*/
 
-/*/////////////header and navigation ///////////*/
+/*/////////////header and navigation //////////////*/
 
 header {
-    background-color: #fff; 
+    background-color: var(--white); 
     height: 65px;
     padding:20px;    
 }
@@ -39,7 +43,7 @@ header {
     padding:10px;
     position:absolute;
     top: 25px;
-    background: linear-gradient(to right, #FFF, #EDEDED);
+    background: linear-gradient(to right, var(--white), #EDEDED);
 }
 
 .nav li {
@@ -53,11 +57,14 @@ header {
 
 .nav a{
     text-decoration: none;
-    color:grey;
+    color: var(--link-color);
     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     font-weight: 200;
     font-size: 20px;
-    color: grey;
+}
+
+.nav li:hover {
+    transform:scale(1em);
 }
 
 .header-image {
@@ -73,7 +80,7 @@ header {
 }
 
 .header-subtitle {
-    width: 300px;
+    width: 400px;
     height: 80px;
     background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
     border: #c8c8c8 1px solid;
@@ -95,7 +102,7 @@ header {
 
 /*-------------------------------------------------*/
 
-/*/////////////main and sections ///////////*/
+/*/////////////main and sections //////////////////*/
 
 main {
     margin: 20px;
@@ -118,10 +125,10 @@ main p{
     min-width: 200px;
     margin-right:20px;
     padding-right: 30px;
-    border-right: #A9A9A9 2px solid;
+    border-right: var(--border-title) 2px solid;
     min-height: 100px;
     font-size: 25px;
-    color: #A2A2a2;
+    color: var(--section-title-color);
     font-weight: normal;
 }
 
@@ -131,10 +138,6 @@ main p{
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-}
-
-.section-portfolio {
-    
 }
 
 .section p{
@@ -147,14 +150,35 @@ main p{
 }
 .section img {
     float:left;
-    border:solid 3px #EDEDED;
+    border:solid 3px var(--border-image);
     margin:20px;
     max-height:200px;
 }
 
+
+
 /*-------------------------------------------------*/
 
-/*///////////////////// footer //////////////////////*/
+/*///////////////////// portfolio /////////////////*/
+
+.section-portfolio {
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+.section-upperTop {
+    background-size: cover;
+    background-image:url(../images/css-snippets-page.jpg);
+    width: 100%;
+    height: 250px;
+    margin: 20px;
+}
+
+
+/*-------------------------------------------------*/
+
+/*///////////////////// footer ////////////////////*/
 
 footer {
     background-color: white;
@@ -164,7 +188,17 @@ footer {
     text-align: center;
     font-size:15px;
     width:100%;
+}
 
+.section li {
+    display:inline-block;
+    margin:20px;
+    
+}
+
+.section a{
+    text-decoration: underline;
+    color: var(--link-color);
 }
 
 /*-------------------------------------------------*/
