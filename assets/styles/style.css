@@ -332,26 +332,39 @@ footer {
 
 @media only screen and (max-width: 400px) {
 
-.header-logo h1 {
-    font-size:60px;
-}
-.nav a{
-    font-size:30px;
-}
-.section-title {
-    font-size: 35px;
-}
-.section-grid-layout {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
+    .header-logo h1 {
+        font-size:60px;
+    }
+    .nav a{
+        font-size:30px;
+    }
+    .section-title {
+        font-size: 35px;
+    }
+    .section-grid-layout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
 
-section {
-    display:flex;
-    flex-direction: column;
-}
+    section {
+        display:flex;
+        flex-direction: column;
+    }
 }
 
 /* media queries for tablet */
+
+@media only screen and (max-width: 768px) {
+
+    .header-logo h1 {
+        font-size:45px;
+    }
+    .nav a{
+        font-size:25px;
+    }
+    .section-title {
+        font-size: 30px;
+    }
+}
