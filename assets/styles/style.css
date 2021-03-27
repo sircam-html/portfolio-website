@@ -2,6 +2,8 @@
 --white: #fff;
 --border-image: #EDEDED;
 --border-title: #A9A9A9;
+--border-color: #A9A9A9;
+--border-color-hover: #585858;
 --section-title-color: #A2A2A2;
 --link-color: grey;
 
@@ -76,8 +78,7 @@ header {
     margin:20px;
     position:relative;
     left:-15px;
-    
-}
+    }
 
 .header-subtitle {
     width: 400px;
@@ -116,6 +117,7 @@ main p{
 
 .section {
     display:flex;
+    flex-direction: row;
     padding: 40px;
     background: linear-gradient(75deg, rgba(245,245,245,1), rgba(255,255,255,0),rgba(245,245,245,1));
     margin-bottom: 20px;
@@ -162,19 +164,115 @@ main p{
 /*///////////////////// portfolio /////////////////*/
 
 .section-portfolio {
-    display:flex;
-    justify-content: space-around;
-    
-}
-
-.section-upperTop {
-    background-size: cover;
-    background-image:url(../images/css-snippets-page.jpg);
     width: 100%;
-    height: 250px;
-    margin: 20px;
+    padding:20px;
 }
 
+.section-mainTop {
+    display:flex;
+    max-width: 100%;
+    height:250px;
+    margin:0;
+}
+
+.section-card {
+    display: flex;
+    flex-direction: column;
+    border: var(--border-color) 4px solid;
+    position:relative;
+}
+.section-grid-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "img-1 img-2"
+                         "img-3 img-4";
+    position: relative;
+}
+
+/* top image main*/
+
+.section-mainTop {
+    display:flex;
+    flex-direction: column;
+    background-size: cover;
+    background-image: url(../images/balln.jpg);
+    width: 100%;
+    padding:10px;
+    border:solid 3px var(--border-color);
+    position: relative;
+}
+
+/* other images*/
+
+.portfolio-title {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    background-color: var(--border-color);
+    width: 200px;
+    height: 65px;
+    padding: 20px;
+}
+
+.portfolio-title h2 {
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 20px;
+}
+
+.portfolio-title h3 {
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 15px;
+}
+
+.section-box-1 {
+    background-size: cover;
+    background-image: url(../images/css-snippets-page.jpg);
+    grid-area: "img-1";
+    height: 200px;
+    padding: 10px;
+    margin-right:1%;
+    margin-bottom:1%;
+    border:solid 2px var(--border-color);
+    position: relative;
+}
+
+.section-box-2 {
+    background-size: cover;
+    background-image: url(../images/password-gen.jpg);
+    grid-area: "img-2";
+    height: 200px;
+    padding: 10px;
+    margin-left:1%;
+    margin-bottom:1%;
+    border:solid 2px var(--border-color);
+    position: relative;
+}
+
+.section-box-3 {
+    background-size: cover;
+    background-image: url(../images/css-snippets-page.jpg);
+    grid-area: "img-3";
+    height: 200px;
+    padding: 10px;
+    margin-right:1%;
+    margin-top:1%;
+    border:solid 2px var(--border-color);
+    position: relative;
+}
+
+.section-box-4 {
+    background-size: cover;
+    background-image: url(../images/css-snippets-page.jpg);
+    grid-area: "img-4";
+    height: 200px;
+    padding: 10px;
+    margin-left:1%;
+    margin-top:1%;
+    border:solid 2px var(--border-color);
+    position: relative;
+}
 
 /*-------------------------------------------------*/
 
@@ -193,7 +291,6 @@ footer {
 .section li {
     display:inline-block;
     margin:20px;
-    
 }
 
 .section a{
