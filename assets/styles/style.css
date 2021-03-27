@@ -41,11 +41,16 @@ header {
     font-size: 45px;
     color:darkgray;
     text-align: right;
-    width: 30%;
+    width: fit-content;
     padding:10px;
     position:absolute;
     top: 25px;
     background: linear-gradient(to right, var(--white), #EDEDED);
+    transition: 0.3s ease-in-out;
+}
+.header-logo h1:hover {
+    transform: translateX(20px);
+    
 }
 
 .nav li {
@@ -55,6 +60,11 @@ header {
     position:relative;
     bottom:5px;
     right: 25px;
+    transition: 0.3s ease-in-out;
+}
+.nav li:hover {
+    transform:translate(0, -10px);
+    border-bottom:solid 5px var(--border-color-hover);
 }
 
 .nav a{
@@ -63,10 +73,10 @@ header {
     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     font-weight: 200;
     font-size: 20px;
+    transition: 0.3s ease-in-out;
 }
-
-.nav li:hover {
-    transform:scale(1em);
+.nav a:hover{
+    transform:translate(0, -10px);
 }
 
 .header-image {
@@ -181,6 +191,7 @@ main p{
     border: var(--border-color) 4px solid;
     position:relative;
 }
+
 .section-grid-layout {
     width: 100%;
     display: grid;
@@ -202,18 +213,20 @@ main p{
     padding:10px;
     border:solid 3px var(--border-color);
     position: relative;
+    color: var(--border-color-hover);
 }
 
 /* other images*/
 
 .portfolio-title {
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     left: 0px;
     background-color: var(--border-color);
-    width: 200px;
-    height: 65px;
+    width: fit-content;
+    height: fit-content;
     padding: 20px;
+    box-shadow: 5px 10px 20px 5px rgba(0, 0, 0, 0.10) ;
 }
 
 .portfolio-title h2 {
@@ -226,6 +239,17 @@ main p{
     font-size: 15px;
 }
 
+.portfolio-container{
+    transition: 0.4s ease-in-out;
+}
+
+.portfolio-container:hover{
+    transform: translate(0, -10px);
+    background-color: white;
+    opacity: .75;
+    
+}
+
 .section-box-1 {
     background-size: cover;
     background-image: url(../images/css-snippets-page.jpg);
@@ -236,6 +260,7 @@ main p{
     margin-bottom:1%;
     border:solid 2px var(--border-color);
     position: relative;
+    color: var(--border-color-hover);
 }
 
 .section-box-2 {
@@ -248,11 +273,12 @@ main p{
     margin-bottom:1%;
     border:solid 2px var(--border-color);
     position: relative;
+    color: var(--border-color-hover);
 }
 
 .section-box-3 {
     background-size: cover;
-    background-image: url(../images/css-snippets-page.jpg);
+    background-color:lightgrey;
     grid-area: "img-3";
     height: 200px;
     padding: 10px;
@@ -260,11 +286,12 @@ main p{
     margin-top:1%;
     border:solid 2px var(--border-color);
     position: relative;
+    color: var(--border-color-hover);
 }
 
 .section-box-4 {
     background-size: cover;
-    background-image: url(../images/css-snippets-page.jpg);
+    background-color: lightgrey;
     grid-area: "img-4";
     height: 200px;
     padding: 10px;
@@ -272,6 +299,7 @@ main p{
     margin-top:1%;
     border:solid 2px var(--border-color);
     position: relative;
+    color: var(--border-color-hover);
 }
 
 /*-------------------------------------------------*/
@@ -299,3 +327,31 @@ footer {
 }
 
 /*-------------------------------------------------*/
+
+/* media queries for mobile */
+
+@media only screen and (max-width: 400px) {
+
+.header-logo h1 {
+    font-size:60px;
+}
+.nav a{
+    font-size:30px;
+}
+.section-title {
+    font-size: 35px;
+}
+.section-grid-layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+section {
+    display:flex;
+    flex-direction: column;
+}
+}
+
+/* media queries for tablet */
