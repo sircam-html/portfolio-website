@@ -423,7 +423,7 @@ h3.profile-title {
 .banner-bg {
   padding: 260px 80px;
   position: relative;
-  background: url("../img/7.jpg");
+  background: url("https://cdn.jsdelivr.net/gh/sircam-html/portfolio-website@main/assets/7.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
